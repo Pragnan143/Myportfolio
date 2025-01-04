@@ -6,7 +6,7 @@
   scroll-behavior: smooth;
 }
 header {
-  height: 60px;
+  height: 80px;
   width: 100%;
   background-color: #534a97;
   display: flex;
@@ -131,7 +131,7 @@ h1 > span {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 80px 0;
+  padding: 150px 0;
   gap: 80px;
   background-color: #f5efff;
   justify-content: start;
@@ -219,8 +219,9 @@ h1 > span {
 }
 
 #projects {
-  padding: 64px 0;
+  padding: 104px 0;
   width: 100%;
+  height: 100%;
 }
 #projects > h1::after {
   content: "";
@@ -250,7 +251,7 @@ h1 > span {
   flex-direction: column;
   cursor: pointer;
   /* transform: scale(1); */
-  transition: all 0.5s ease  ;
+  transition: all 0.5s ease;
 }
 
 .project_card:hover {
@@ -290,7 +291,7 @@ h1 > span {
   color: #362e71;
 }
 .project_details > p {
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 400;
 }
 .technologies > .tech_container {
@@ -340,7 +341,6 @@ h1 > span {
     font-size: 36px;
     font-weight: 900;
   }
-
   .hero_left > h2 {
     font-size: 18px;
     font-weight: 700;
@@ -348,6 +348,41 @@ h1 > span {
   .hero_left > p {
     font-size: 18px;
     font-weight: 300;
+  }
+  .abt_wrap {
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+  .abt_wrap > .tech_stack,
+  .abt_wrap > .abt_desc {
+    width: 95%;
+  }
+  .tech_stack {
+    padding: 20px 48px;
+  }
+  .tech_stack > .skills {
+    filter: blur(0);
+    -webkit-filter: blur(0);
+  }
+
+  #about {
+    padding: 50px 0;
+    gap: 40px;
+  }
+  #projects {
+    padding: 50px 0;
+  }
+  #about > h1,
+  #projects > h1 {
+    margin-left: 20px;
+  }
+
+  .project_card {
+    width: 95%;
   }
 }
 
