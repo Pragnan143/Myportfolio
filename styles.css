@@ -131,8 +131,8 @@ h1 > span {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-top: 70px;
-  gap: 100px;
+  padding: 80px 0;
+  gap: 80px;
   background-color: #f5efff;
   justify-content: start;
 
@@ -140,12 +140,20 @@ h1 > span {
 }
 #about > h1,
 #projects > h1 {
+  position: relative;
   margin-left: 60px;
   font-size: xx-large;
   color: #362e71;
 }
-h1 > u {
-  height: 5px;
+
+#about > h1::after {
+  content: "";
+  width: 5%;
+  height: 4px;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  background: #362e71;
 }
 .abt_wrap {
   height: 600px;
@@ -211,9 +219,17 @@ h1 > u {
 }
 
 #projects {
-  padding-top: 100px;
+  padding: 64px 0;
   width: 100%;
-  background-color: #f5efff;
+}
+#projects > h1::after {
+  content: "";
+  width: 8%;
+  height: 4px;
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  background: #362e71;
 }
 .projects_wrap {
   height: 700px;
@@ -224,16 +240,23 @@ h1 > u {
   gap: 40px;
 }
 .project_card {
+  /* background: linear-gradient(#362e71, #f5efff); */
   height: 90%;
   width: 500px;
-  padding: 10px;
-  border: 2px solid #362e71;
+  padding: 8px;
+  border: 3px solid #362e71;
   border-radius: 25px;
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  /* transform: scale(1); */
+  transition: all 0.5s ease  ;
 }
 
+.project_card:hover {
+  box-shadow: 0 0 12px 6px #534a97;
+  transform: scale(1.05);
+}
 .project_card > .img_contain {
   height: 55%;
   width: 100%;
@@ -241,10 +264,14 @@ h1 > u {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   overflow: hidden;
+  transition: transform 0.8s ease;
 }
 .img_contain > img {
   height: 100%;
   width: 100%;
+}
+.img_contain:hover {
+  transform: scale(1.04) translateY(-2px);
 }
 .project_card > .project_details {
   padding-top: 10px;
