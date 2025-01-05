@@ -238,13 +238,14 @@ h1 > span {
   padding-top: 60px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 40px;
+  /* justify-content: space-evenly; */
+  gap: 30px;
+  padding-left: 60px;
 }
 .project_card {
   /* background: linear-gradient(#362e71, #f5efff); */
   height: 90%;
-  width: 500px;
+  width: 420px;
   padding: 8px;
   border: 3px solid #362e71;
   border-radius: 25px;
